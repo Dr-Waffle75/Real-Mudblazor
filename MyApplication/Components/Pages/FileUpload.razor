@@ -1,0 +1,275 @@
+@page "/fileupload"
+@rendermode InteractiveServer
+
+<PageTitle>FileUpload</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">File Upload</MudText>
+
+
+
+<MudFileUpload T="IBrowserFile" FilesChanged="UploadFiles2">
+    <ActivatorContent>
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   StartIcon="@Icons.Material.Filled.CloudUpload">
+            Upload csv
+        </MudButton>
+    </ActivatorContent>
+</MudFileUpload>
+
+<h2>Selected file</h2>
+<div>
+    <div>File name: @FileName</div>
+    <div>File size: @FileSize.ToString("n0") bytes</div>
+    <div>File type: @FileType</div>
+    <div>Last modified: @LastModified</div>
+</div>
+
+<div>
+@if(createdDictionary)
+    {
+    
+    <p>true</p>
+    <MudSimpleTable Style='overflow: auto;'>
+        <tr>
+            <th>Reader ID</th>
+            <th>Reader Name</th>
+            <th>Number of reader events</th>
+        </tr>
+        <tbody>
+        @foreach(KeyValuePair<string, List<ReaderEvent>> i in dic)
+            {
+                <tr>
+                    <td>@i.Key</td>
+                    <td>@i.Value[0].reader</td>
+                    <td>@i.Value.Count()</td>
+                </tr>
+            }
+        </tbody>
+    </MudSimpleTable>
+}
+</div>
+
+
+<div style="padding-top: 10px;" >
+ @if(createdDayOfWeekDictionary)
+    {
+    <MudSimpleTable Style="overflow: auto;">
+        <tr>
+            <th>Day Of Week</th>
+            <th>Number of reader events</th>
+        </tr>
+        <tbody>
+            @foreach(KeyValuePair<string, List<ReaderEvent>> i in dayOfWeekDic)
+                {
+                    <tr>
+                        <td>@i.Key</td>
+                        <td>@i.Value.Count()</td>
+                    </tr>
+                }
+        </tbody>
+    </MudSimpleTable>
+} 
+</div>
+
+ <div>
+
+    @if(createdDayOfWeekDictionary) 
+    {
+        
+        
+        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" XAxisLabels="@XAxisLabels" Width="100%" Height="350px" ChartOptions="@Options"/>
+        <MudGrid>
+            <MudItem xs="6">
+                <MudText Typo="Typo.body1" Class="py-3">Selected: @(Index < 0 ? "None" : Series[Index].Name)</MudText>
+            </MudItem>
+            <MudItem xs="6">
+                <MudSlider @bind-Value="Options.LineStrokeWidth" Min="1" Max="10" Color="Color.Info">Line Width: @Options.LineStrokeWidth.ToString()</MudSlider>
+            </MudItem>
+        </MudGrid>
+        
+    }
+
+</div> 
+
+
+@code {
+    public bool createdDictionary = false;
+    public bool createdDayOfWeekDictionary = false;
+    public string FileName { get; set; } = "";
+    public long FileSize { get; set; }
+    public string FileType { get; set; } = "";
+    public DateTimeOffset LastModified { get; set; }
+    public string ErrorMessage { get; set; } = "";
+    private List<ReaderEvent> masterList = new List<ReaderEvent>();
+    private Dictionary<string, List<ReaderEvent>> dic = new Dictionary<string, List<ReaderEvent>>();
+    private Dictionary<string, List<ReaderEvent>> dayOfWeekDic = new Dictionary<string, List<ReaderEvent>>();
+    
+
+
+    const int MAX_FILESIZE = 10000000; // 2 MB
+
+    private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
+    public ChartOptions Options = new ChartOptions();
+    
+    public List<ChartSeries> Series = new List<ChartSeries>()
+    {
+        new ChartSeries() { Name = "Reader events", Data = new double[6] },
+    };
+    public string[] XAxisLabels = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+
+    IList<IBrowserFile> files = new List<IBrowserFile>();
+     private async void UploadFiles2(IBrowserFile file)
+     {
+        files.Add(file);
+        await FileUploaded(file);
+        //TODO upload the files to the server
+     }
+    // Handles a single file
+
+
+     public async Task FileUploaded(IBrowserFile e)
+     {
+         var browserFile = e;
+
+
+         if (browserFile != null)
+         {
+             FileSize = browserFile.Size;
+             FileType = browserFile.ContentType;
+             FileName = browserFile.Name;
+             LastModified = browserFile.LastModified;
+
+
+             try
+             { //save and upload file to the disk
+                 var fileStream = browserFile.OpenReadStream(MAX_FILESIZE);
+                 var destinationStream = new FileStream(FileName, FileMode.Create);
+                 await fileStream.CopyToAsync(destinationStream);
+                 destinationStream.Close();
+
+
+                //create stream reader and begin reading lines
+                 StreamReader sr = new StreamReader(FileName);
+                 string? line = sr.ReadLine();
+                 while((line = sr.ReadLine()) != null)
+                 {
+                    string[] data = line.Split(",");
+                    masterList.Add(new ReaderEvent(data[0], data[1], data[2], data[3], data[4], data[5]));
+                   
+                 }
+                 makeDictionary(masterList);
+                 dayOfTheWeekDictionary(masterList);
+                 createChartSeries(dayOfWeekDic);
+                 
+                 
+             }
+             catch (Exception exception)
+             {
+                 ErrorMessage = exception.Message;
+             }
+         }
+     }
+
+      public Dictionary<string, List<ReaderEvent>> dayOfTheWeekDictionary(List<ReaderEvent> bigList)
+        {
+            foreach(ReaderEvent r in bigList)
+            {
+                
+                if(!dayOfWeekDic.ContainsKey(r.getDate().ToString("dddd")))
+                {
+                    dayOfWeekDic.Add(r.getDate().ToString("dddd"), new List<ReaderEvent>());
+                }
+                dayOfWeekDic[r.getDate().ToString("dddd")].Add(r);
+               
+            }
+            createdDayOfWeekDictionary = true;
+            StateHasChanged();
+            return dayOfWeekDic;
+        } 
+     
+     public Dictionary<string, List<ReaderEvent>> makeDictionary(List<ReaderEvent> bigList)
+        {
+            foreach(ReaderEvent r in bigList)
+            {
+                if(!dic.ContainsKey(r.getReaderID()))
+                {
+                    dic.Add(r.getReaderID(), new List<ReaderEvent>());
+                }
+                dic[r.getReaderID()].Add(r);
+               
+            }
+            createdDictionary = true;
+            StateHasChanged();
+            return dic;
+        }
+     public void createChartSeries(Dictionary<string, List<ReaderEvent>> masterDictionary)
+     {
+        double[] eventCounts = new double[7];
+        foreach (var kvp in masterDictionary)
+        {
+            switch(kvp.Key)
+            {
+                case "Sunday": eventCounts[6] = kvp.Value.Count; break;
+                case "Monday": eventCounts[0] = kvp.Value.Count; break;
+                case "Tuesday": eventCounts[1] = kvp.Value.Count; break;
+                case "Wednesday": eventCounts[2] = kvp.Value.Count; break;
+                case "Thursday": eventCounts[3] = kvp.Value.Count; break;
+                case "Friday": eventCounts[4] = kvp.Value.Count; break;
+                case "Saturday": eventCounts[5] = kvp.Value.Count; break;
+            }
+        }
+        Series[0].Data = eventCounts;
+        StateHasChanged();
+
+     }
+
+     
+
+
+     public class ReaderEvent
+     {
+        public DateTime date;
+        public string site;
+        public string reader;
+        public string hash;
+        public string devid;
+        public string machine;
+
+
+
+
+        public ReaderEvent(string reportedDate, string reportedSite, string reportedReader, string reportedHash, string reportedDevid, string reportedMachine)
+        {
+            date = DateTime.Parse(reportedDate);;
+            site = reportedSite;
+            reader = reportedReader;
+            hash = reportedHash;
+            devid = reportedDevid;
+            machine = reportedMachine;
+
+
+        }
+        public string getReaderID() => devid + machine;
+       
+
+
+        public DateTime getDate() => date;
+        public string getSite() => site;
+        public string getReader() => reader;
+        public string getHash() => hash;
+        public string getDevid() => devid;
+        public string getMachine() => machine;
+
+
+
+
+
+
+     }
+
+
+
+ 
+}
