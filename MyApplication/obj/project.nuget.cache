@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eFn24+GX3H8=",
+  "dgSpecHash": "tqrXoJqQXZk=",
   "success": true,
-  "projectFilePath": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\MyApplication.csproj",
+  "projectFilePath": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\MyApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oaknu\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.12\\microsoft.aspnetcore.authorization.8.0.12.nupkg.sha512",
     "C:\\Users\\oaknu\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.12\\microsoft.aspnetcore.components.8.0.12.nupkg.sha512",
@@ -18,7 +18,7 @@
     "C:\\Users\\oaknu\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\oaknu\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\oaknu\\.nuget\\packages\\microsoft.jsinterop\\8.0.12\\microsoft.jsinterop.8.0.12.nupkg.sha512",
-    "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\mudblazor.8.3.0.nupkg.sha512",
+    "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\mudblazor.8.4.0.nupkg.sha512",
     "C:\\Users\\oaknu\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
   ],
   "logs": []

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xivBx1/KJ7C5JcbWijhmwDL3RXDFxDnVYDS408DpVyw=",
+  "Hash": "fr4KXEOCxS+Y/99NCDz4c5Jox+ufx1xxWk5ZUIoRTWo=",
   "Source": "MyApplication",
   "BasePath": "_content/MyApplication",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyApplication\\wwwroot",
       "Source": "MyApplication",
-      "ContentRoot": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\wwwroot\\",
       "BasePath": "_content/MyApplication",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -31,17 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hmu6kx9mgf",
-      "Integrity": "d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=",
+      "Fingerprint": "d6totk621y",
+      "Integrity": "tZZda7xjKR8Ut52jto1sSWi1QQsmfoSD9iiGSA03Y4s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -52,17 +52,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tspksaymx7",
-      "Integrity": "Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ=",
+      "Fingerprint": "txmka4fsu8",
+      "Integrity": "IXuIi7417dQ9MYZ5CAtdW+X0ShICleNv97MFML6i18Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\wwwroot\\favicon.ico",
+      "Identity": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\wwwroot\\favicon.ico",
       "SourceId": "MyApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\wwwroot\\",
       "BasePath": "_content/MyApplication",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -83,7 +83,7 @@
   "Endpoints": [
     {
       "Route": "_content/MudBlazor/MudBlazor.min.css",
-      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -96,7 +96,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "595896"
+          "Value": "597633"
         },
         {
           "Name": "Content-Type",
@@ -104,23 +104,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=\""
+          "Value": "\"tZZda7xjKR8Ut52jto1sSWi1QQsmfoSD9iiGSA03Y4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+          "Value": "Sun, 16 Mar 2025 08:08:24 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU="
+          "Value": "sha256-tZZda7xjKR8Ut52jto1sSWi1QQsmfoSD9iiGSA03Y4s="
         }
       ]
     },
     {
-      "Route": "_content/MudBlazor/MudBlazor.min.hmu6kx9mgf.css",
-      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
+      "Route": "_content/MudBlazor/MudBlazor.min.d6totk621y.css",
+      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -133,7 +133,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "595896"
+          "Value": "597633"
         },
         {
           "Name": "Content-Type",
@@ -141,21 +141,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=\""
+          "Value": "\"tZZda7xjKR8Ut52jto1sSWi1QQsmfoSD9iiGSA03Y4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+          "Value": "Sun, 16 Mar 2025 08:08:24 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hmu6kx9mgf"
+          "Value": "d6totk621y"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU="
+          "Value": "sha256-tZZda7xjKR8Ut52jto1sSWi1QQsmfoSD9iiGSA03Y4s="
         },
         {
           "Name": "label",
@@ -165,7 +165,7 @@
     },
     {
       "Route": "_content/MudBlazor/MudBlazor.min.js",
-      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -178,7 +178,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "55250"
+          "Value": "58006"
         },
         {
           "Name": "Content-Type",
@@ -186,23 +186,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ=\""
+          "Value": "\"IXuIi7417dQ9MYZ5CAtdW+X0ShICleNv97MFML6i18Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+          "Value": "Sun, 16 Mar 2025 08:08:24 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ="
+          "Value": "sha256-IXuIi7417dQ9MYZ5CAtdW+X0ShICleNv97MFML6i18Y="
         }
       ]
     },
     {
-      "Route": "_content/MudBlazor/MudBlazor.min.tspksaymx7.js",
-      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
+      "Route": "_content/MudBlazor/MudBlazor.min.txmka4fsu8.js",
+      "AssetFile": "C:\\Users\\oaknu\\.nuget\\packages\\mudblazor\\8.4.0\\staticwebassets\\MudBlazor.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -215,7 +215,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "55250"
+          "Value": "58006"
         },
         {
           "Name": "Content-Type",
@@ -223,21 +223,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ=\""
+          "Value": "\"IXuIi7417dQ9MYZ5CAtdW+X0ShICleNv97MFML6i18Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+          "Value": "Sun, 16 Mar 2025 08:08:24 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tspksaymx7"
+          "Value": "txmka4fsu8"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ="
+          "Value": "sha256-IXuIi7417dQ9MYZ5CAtdW+X0ShICleNv97MFML6i18Y="
         },
         {
           "Name": "label",
@@ -247,7 +247,7 @@
     },
     {
       "Route": "favicon.2jeq8efc6q.ico",
-      "AssetFile": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\wwwroot\\favicon.ico",
+      "AssetFile": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -268,7 +268,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 15:45:50 GMT"
+          "Value": "Sun, 16 Mar 2025 23:18:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -292,7 +292,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\wwwroot\\favicon.ico",
+      "AssetFile": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -313,7 +313,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 15:45:50 GMT"
+          "Value": "Sun, 16 Mar 2025 23:18:11 GMT"
         },
         {
           "Name": "Cache-Control",

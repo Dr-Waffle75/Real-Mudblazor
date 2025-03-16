@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\MyApplication.csproj": {}
+    "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\MyApplication.csproj": {}
   },
   "projects": {
-    "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\MyApplication.csproj": {
+    "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\MyApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\MyApplication.csproj",
+        "projectUniqueName": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\MyApplication.csproj",
         "projectName": "MyApplication",
-        "projectPath": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\MyApplication.csproj",
+        "projectPath": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\MyApplication.csproj",
         "packagesPath": "C:\\Users\\oaknu\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\oaknu\\Desktop\\Capstone\\Real Mudblazor\\MyApplication\\obj\\",
+        "outputPath": "c:\\Users\\oaknu\\Desktop\\Capstone\\MudBlazor 1\\MyApplication\\Real-Mudblazor\\MyApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oaknu\\AppData\\Roaming\\NuGet\\NuGet.Config"

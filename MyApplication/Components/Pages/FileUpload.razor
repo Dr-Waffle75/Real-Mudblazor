@@ -26,7 +26,7 @@
 </div>
 
 <div>
-@if(createdDictionary)
+@if(createdDictionary || dic.Count > 0)
     {
     
     <p>true</p>
@@ -52,7 +52,7 @@
 
 
 <div style="padding-top: 10px;" >
- @if(createdDayOfWeekDictionary)
+ @if(createdDayOfWeekDictionary || dayOfWeekDic.Count > 0)
     {
     <MudSimpleTable Style="overflow: auto;">
         <tr>
@@ -74,7 +74,7 @@
 
  <div>
 
-    @if(createdDayOfWeekDictionary) 
+    @if(createdDayOfWeekDictionary || dayOfWeekDic.Count > 0) 
     {
         
         
@@ -101,9 +101,9 @@
     public string FileType { get; set; } = "";
     public DateTimeOffset LastModified { get; set; }
     public string ErrorMessage { get; set; } = "";
-    private List<ReaderEvent> masterList = new List<ReaderEvent>();
-    private Dictionary<string, List<ReaderEvent>> dic = new Dictionary<string, List<ReaderEvent>>();
-    private Dictionary<string, List<ReaderEvent>> dayOfWeekDic = new Dictionary<string, List<ReaderEvent>>();
+    private static List<ReaderEvent> masterList = new List<ReaderEvent>();
+    private static Dictionary<string, List<ReaderEvent>> dic = new Dictionary<string, List<ReaderEvent>>();
+    private static Dictionary<string, List<ReaderEvent>> dayOfWeekDic = new Dictionary<string, List<ReaderEvent>>();
     
 
 
@@ -112,7 +112,7 @@
     private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
     public ChartOptions Options = new ChartOptions();
     
-    public List<ChartSeries> Series = new List<ChartSeries>()
+    public static List<ChartSeries> Series = new List<ChartSeries>()
     {
         new ChartSeries() { Name = "Reader events", Data = new double[6] },
     };
